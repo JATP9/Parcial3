@@ -9,16 +9,13 @@ import java.util.UUID;
 @Entity
 @Table(name = "videojuegos")
 public class VideoJuegosEntity {
-    /*
-    @Id
-    @GeneratedValue(generator = "uuid2")
-    @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    private String id;*/
+
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
     @Column(columnDefinition = "VARCHAR(36)")
-    private String id = UUID.randomUUID().toString();
+    private String id;
+    //= UUID.randomUUID().toString();
 
 
     @Column(unique = true)
