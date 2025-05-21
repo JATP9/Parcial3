@@ -5,10 +5,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.Parcial3.entities.VideoJuegosEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+
+@Repository
 public interface VideoJuegosRepository extends JpaRepository<VideoJuegosEntity, String> {
     // Paginación basada en coincidencia parcial del título
     Page<VideoJuegosEntity> findAllByTituloContaining(String titulo, Pageable pageable);

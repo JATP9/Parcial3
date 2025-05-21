@@ -2,11 +2,19 @@ package com.example.Parcial3.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import java.util.UUID;
 
 @Entity
+@Getter
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "videojuegos")
 public class VideoJuegosEntity {
 
@@ -38,17 +46,6 @@ public class VideoJuegosEntity {
     /*
     @Version
     private Integer version = 0; // Establecer un valor predeterminado*/
-
-
-    // Getters y Setters
-    /*
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public UUID getId() {
-        return id;
-    }*/
 
 
     public String getId() {
